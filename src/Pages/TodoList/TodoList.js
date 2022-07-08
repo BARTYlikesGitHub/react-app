@@ -1,6 +1,5 @@
 // rfc - shortcut to create function component with file name
-import React from 'react'
-import Todo from './Todo'
+import Todo from './Todo.js'
 
 export default function TodoList({ todos, toggleToDo }) {
 
