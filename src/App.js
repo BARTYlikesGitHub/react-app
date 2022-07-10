@@ -4,8 +4,8 @@ import TodoComponent from './Pages/TodoList/TodoComponent.js'
 import Home from './Pages/Home.js'
 import About from './Pages/About.js'
 import ErrorPage from './Pages/ErrorPage.js'
-import { Tab, Tabs, Box } from '@mui/material';
-
+import { Tab, Tabs, Toolbar, AppBar, Container, Typography } from '@mui/material';
+import ChildCareIcon from '@mui/icons-material/ChildCare';
 
 function App() {
   const [value, setValue] = React.useState(0);
@@ -16,17 +16,22 @@ function App() {
   return (
     <Router>
       <div>
-        <Box>
-          <Tabs
-            onChange={handleChange}
-            value={value}
-            aria-label="Tabs where each tab needs to be selected manually"
-          >
-            <Tab label="Home Page" component={Link} to={routes[0]} />
-            <Tab label="About Page" component={Link} to={routes[1]} />
-            <Tab label="Todo List Page" component={Link} to={routes[2]} />
-          </Tabs>
-        </Box>
+        <AppBar position='static'>
+          <Container maxWidth="xl">
+            <Toolbar disableGutters>
+              <ChildCareIcon />
+              <Tabs
+                onChange={handleChange}
+                value={value}
+                aria-label="Tabs where each tab needs to be selected manually"
+              >
+                <Tab label="Home Page" component={Link} to={routes[0]} />
+                <Tab label="About Page" component={Link} to={routes[1]} />
+                <Tab label="Todo List Page" component={Link} to={routes[2]} />
+              </Tabs>
+            </Toolbar>
+          </Container>
+        </AppBar>
       </div>
       <div>
         <Routes>
