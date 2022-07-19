@@ -1,13 +1,8 @@
 // rfc - shortcut to create function component with file name
-import React from "react"
+import React from 'react';
 
 function ErrorPage() {
-
-    return (
-        <h1>
-            Error Page
-        </h1>
-    )
+  return <h1>Error Page</h1>;
 }
 
-export default ErrorPage
+export default ErrorPage;
